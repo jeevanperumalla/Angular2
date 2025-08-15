@@ -1,0 +1,10 @@
+.Circle{
+height: 60%;
+width: 20%;
+background-color: white;
+padding-left: 10px;
+margin-left: 2%;
+border-radius: 5px;
+padding-top: 20px;
+margin-top: 10px; 
+}

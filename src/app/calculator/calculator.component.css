@@ -1,0 +1,15 @@
+.button-row {
+  display: flex;
+  gap: 10px;
+  justify-content:center;
+}
+.cal{
+    height:60%;
+    width: 40%;
+    background-color: azure;
+    border-radius: 5px;
+    margin-left: 30%;
+    text-align: center;
+    margin-top: 10%;
+    padding: 20px;
+}
