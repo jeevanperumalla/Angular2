@@ -1,0 +1,23 @@
+<h1>Vehicles</h1>
+
+<table class="table table-success">
+    <thead>
+        <tr>
+            <th>vehicle</th>
+            <th>manufacture</th>
+            <th>cost</th>
+            <th>color</th>
+            <th>image</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let vehicle of vehicles">
+            <td>{{vehicle.Vehicle}}</td>
+            <td>{{vehicle.manufacturer}}</td>
+            <td>{{vehicle.cost}}</td>
+            <td>{{vehicle.color}}</td>
+           <td> <img src="{{vehicle.image}}" alt=""></td>
+        </tr>
+    </tbody>
+</table>
+
