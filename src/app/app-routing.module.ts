@@ -11,6 +11,10 @@ import { CalculatorComponent } from './calculator/calculator.component';
 import { RectangleComponent } from './rectangle/rectangle.component';
 import { CircleComponent } from './circle/circle.component';
 import { BMIComponent } from './bmi/bmi.component';
+import { DirectivesComponent } from './directives/directives.component';
+import { EmployeeComponent } from './employee/employee.component';
+import { ProductsComponent } from './products/products.component';
+
 
 const routes: Routes = [
   // default routing 
@@ -24,6 +28,10 @@ const routes: Routes = [
     {path:'rectangle',component:RectangleComponent},
     {path:'circle',component:CircleComponent},
     {path:'BMI',component:BMIComponent},
+    {path:'Directives',component:DirectivesComponent},
+    {path:'Employee',component:EmployeeComponent},
+    {path:'Products',component:ProductsComponent},
+    
 
   ] },// parent routing
   

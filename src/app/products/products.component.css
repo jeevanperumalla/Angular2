@@ -1,0 +1,28 @@
+.parent{
+    width:100%;
+    height:100%;
+    background-color:lightgreen;
+}
+.one{
+    width:100%;
+    height:45%;
+    background-color: seagreen;
+    display: flex;
+}
+.left{
+    width:70%;
+    height:100%;
+    background-color: lightseagreen;
+    
+}
+.right{
+    width:30%;
+    height:100%;
+    background-color:lightseagreen;
+    
+}
+.two{
+    width:100%;
+    height:55%; 
+    background-color: greenyellow;
+}

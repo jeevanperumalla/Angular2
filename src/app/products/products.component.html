@@ -1,0 +1,70 @@
+<div class="parent">
+<div class="one">
+    <div class="left">
+        <h1 style="text-align: center; color: white;" >Flipkart</h1> <br>
+
+<input type="text" [(ngModel)]="Name"(keyup)="Filter()" placeholder=" search"> &nbsp; 
+<button class=" btn btn-info" (click)="freeDelivery()">Only Free Delivery</button><br> <br>
+
+<button class=" btn btn-warning" (click)="PriceAsc()">Price low to high</button> &nbsp;
+<button class="btn btn-warning" (click)="PriceDsc()">Price high to low</button>&nbsp;
+<button class=" btn btn-warning" (click)="RatingDsc()">Rating low to high</button>&nbsp;
+<button class="btn btn-warning" (click)="RatingAsc()">Rating high to low</button> <br> <br>
+<button class=" btn btn-info" (click)="applyDiscount()" >Apply50% Discount</button> &nbsp; &nbsp;
+<button class=" btn btn-info" (click)="Tip()" >Price with Delivary Charges</button><br> <br>
+<button class="btn btn-danger" (click)="Total()">Total Price</button> &nbsp;
+<button class="btn btn-danger">Total cart items</button>
+    </div>
+    <div class="right">
+
+          <label>Name:</label>
+          <input type="text" [(ngModel)]="ProductName"> <br>
+
+          <label>Price:</label>
+          <input type="number" [(ngModel)]="Price"> <br>
+
+          <label>Rating:</label>
+          <input type="number" [(ngModel)]="Rating"  > <br>
+
+          <label>Free Delivery:</label>
+
+          <input type="radio" [(ngModel)]="FreeDelivery" [value]="true">
+          <label>yes</label>
+
+          <input type="radio" [(ngModel)]="FreeDelivery" [value]="false">
+          <label>no</label> <br>
+
+          <button class="btn btn-success" (click)="addProduct()">Add to cart</button>
+    </div>
+</div>
+<div class="two">
+    <table class="table table-success">
+    <thead>
+        <tr>
+            <th>S No</th>
+        <th> ProductName</th>
+        <th>Price</th>
+        <th>Rating</th>
+        <th>Free Delivery</th>
+        <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let product of products;let i=index">
+            <td>{{i+1}}</td>
+             <td>{{product.ProductName}}</td>
+              <td>{{product.Price}}</td>
+               <td>{{product.Rating}}</td>
+                <td>{{product.FreeDelivery}}</td>
+
+              <td><button class="btn btn-danger"(click)="delete(i)">Delete</button></td>   
+
+        </tr>
+    </tbody>
+</table>
+
+</div>
+
+
+</div>
+

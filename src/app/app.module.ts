@@ -15,6 +15,9 @@ import { RectangleComponent } from './rectangle/rectangle.component';
 import { CircleComponent } from './circle/circle.component';
 import { BMIComponent } from './bmi/bmi.component';
 import { FormsModule } from '@angular/forms';
+import { DirectivesComponent } from './directives/directives.component';
+import { EmployeeComponent } from './employee/employee.component';
+import { ProductsComponent } from './products/products.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +32,10 @@ import { FormsModule } from '@angular/forms';
     CalculatorComponent,
     RectangleComponent,
     CircleComponent,
-    BMIComponent
+    BMIComponent,
+    DirectivesComponent,
+    EmployeeComponent,
+    ProductsComponent
   ],
   imports: [
     BrowserModule,
