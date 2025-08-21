@@ -1,0 +1,27 @@
+body{
+    margin: 0;
+}
+.parent{
+    height: 100%;
+    width: 100%;
+    background-color:rgb(223, 216, 216);
+    display: flex;
+    flex-wrap: wrap;
+    overflow: auto;
+    justify-content: space-evenly;
+
+}
+.card{
+    height:380px;
+    width: 280px;
+    margin: 10px;
+    object-fit: cover;
+    align-items: center;
+    align-content: start;
+    justify-content: space-evenly;
+}
+img{
+    width: 200px;
+    height: 200px;
+}
+

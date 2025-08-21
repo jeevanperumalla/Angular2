@@ -15,6 +15,8 @@ import { DirectivesComponent } from './directives/directives.component';
 import { EmployeeComponent } from './employee/employee.component';
 import { ProductsComponent } from './products/products.component';
 import { VehiclesComponent } from './vehicles/vehicles.component';
+import { MailComponent } from './mail/mail.component';
+import { FlipkartComponent } from './flipkart/flipkart.component';
 
 
 const routes: Routes = [
@@ -33,6 +35,8 @@ const routes: Routes = [
     {path:'Employee',component:EmployeeComponent},
     {path:'Products',component:ProductsComponent},
     {path:'Vehicles',component:VehiclesComponent},
+    {path:'mail',component:MailComponent},
+    {path:'Flipkart',component:FlipkartComponent},
   
   ] },// parent routing
   
