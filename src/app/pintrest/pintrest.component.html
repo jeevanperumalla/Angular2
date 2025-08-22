@@ -1,0 +1,7 @@
+<div class="parent">
+    <div class="card" *ngFor="let Pintrest of ImageDetails">
+   <img src="{{Pintrest.download_url}}">
+    <a [href]="Pintrest.download_url" target="" class="hover-btn">Download</a>
+    <p class="author-name">{{Pintrest.author}}</p>
+    
+</div>  

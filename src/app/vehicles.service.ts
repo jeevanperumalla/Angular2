@@ -23,9 +23,12 @@ export class VehiclesService {
     }
     getpagitedvehicles(limit:any,page:any):Observable<any>{
     return this._httpClient.get('https://6128991386a213001729f9df.mockapi.io/test/v1/jurisdiction?limit='+limit+"&page="+page);
-  }
-deletevehicle(id:any):Observable<any>{
+   }
+   deletevehicle(id:any):Observable<any>{
     return this._httpClient.delete('https://6128991386a213001729f9df.mockapi.io/test/v1/jurisdiction/'+id);
+  }
+ createvehicle(data:any):Observable<any>{
+ return this._httpClient.post('https://6128991386a213001729f9df.mockapi.io/test/v1/jurisdiction/',data);
   }
 
   

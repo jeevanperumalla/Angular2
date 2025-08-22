@@ -17,6 +17,10 @@ import { ProductsComponent } from './products/products.component';
 import { VehiclesComponent } from './vehicles/vehicles.component';
 import { MailComponent } from './mail/mail.component';
 import { FlipkartComponent } from './flipkart/flipkart.component';
+import { PintrestComponent } from './pintrest/pintrest.component';
+import { WeatherReportComponent } from './weather-report/weather-report.component';
+import { CreateVehicleComponent } from './create-vehicle/create-vehicle.component';
+import { StudentComponent } from './student/student.component';
 
 
 const routes: Routes = [
@@ -37,6 +41,10 @@ const routes: Routes = [
     {path:'Vehicles',component:VehiclesComponent},
     {path:'mail',component:MailComponent},
     {path:'Flipkart',component:FlipkartComponent},
+    {path:'Pintrest',component:PintrestComponent},
+    {path:'WeatherReport',component:WeatherReportComponent},
+    {path:'createVehicle',component:CreateVehicleComponent},
+    {path:'Student',component:StudentComponent},
   
   ] },// parent routing
   

@@ -3,6 +3,7 @@
     height: 100vh;
     background-color: blue;
     display: flex;
+    overflow:auto;
 }
 .left{
     width: 20%;
