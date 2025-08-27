@@ -21,6 +21,10 @@ import { PintrestComponent } from './pintrest/pintrest.component';
 import { WeatherReportComponent } from './weather-report/weather-report.component';
 import { CreateVehicleComponent } from './create-vehicle/create-vehicle.component';
 import { StudentComponent } from './student/student.component';
+import { CreateUserComponent } from './create-user/create-user.component';
+import { CreatStudentComponent } from './creat-student/creat-student.component';
+import { VehiclesDetailsComponent } from './vehicles-details/vehicles-details.component';
+
 
 
 const routes: Routes = [
@@ -29,8 +33,8 @@ const routes: Routes = [
   {path:'dashboard', component:DashboardComponent,children:[
     {path:'home',component:HomeComponent}, 
     // {path:'gallery',component:GalleryComponent},
-    {path:'welcome',component:WelcomeComponent},
-    {path:'DataBinding',component:DataBindingComponent},
+    // {path:'welcome',component:WelcomeComponent},
+    // {path:'DataBinding',component:DataBindingComponent},
     {path:'calculator',component:CalculatorComponent},
     {path:'rectangle',component:RectangleComponent},
     {path:'circle',component:CircleComponent},
@@ -45,6 +49,10 @@ const routes: Routes = [
     {path:'WeatherReport',component:WeatherReportComponent},
     {path:'createVehicle',component:CreateVehicleComponent},
     {path:'Student',component:StudentComponent},
+    {path:'createUser',component:CreateUserComponent},
+    {path:'CreatStudent',component:CreatStudentComponent},
+    {path:'vehicles-details/:id',component:VehiclesDetailsComponent},
+    {path:'edit-vehicle/:id',component:CreateVehicleComponent},
   
   ] },// parent routing
   

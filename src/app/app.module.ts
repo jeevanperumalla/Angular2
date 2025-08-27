@@ -26,6 +26,9 @@ import { PintrestComponent } from './pintrest/pintrest.component';
 import { WeatherReportComponent } from './weather-report/weather-report.component';
 import { CreateVehicleComponent } from './create-vehicle/create-vehicle.component';
 import { StudentComponent } from './student/student.component';
+import { CreateUserComponent } from './create-user/create-user.component';
+import { CreatStudentComponent } from './creat-student/creat-student.component';
+import { VehiclesDetailsComponent } from './vehicles-details/vehicles-details.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +53,10 @@ import { StudentComponent } from './student/student.component';
     PintrestComponent,
     WeatherReportComponent,
     CreateVehicleComponent,
-    StudentComponent
+    StudentComponent,
+    CreateUserComponent,
+    CreatStudentComponent,
+    VehiclesDetailsComponent
   ],
   imports: [
     BrowserModule,

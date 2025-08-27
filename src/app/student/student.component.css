@@ -5,7 +5,7 @@ body{
     height: 100%;
     width: 100%;
     background-color:rgb(223, 216, 216);
-    display: flex;
+    display: flex;   
     flex-wrap: wrap;
     overflow: auto;
     justify-content: space-evenly;
@@ -25,6 +25,7 @@ img{
     width: 173px;
     height: 153px;
     border-radius: 85px;
+    
 
     /* right: 250px; */
 

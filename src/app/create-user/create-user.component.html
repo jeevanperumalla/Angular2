@@ -1,0 +1,61 @@
+<h1>Create User</h1>
+
+<form [formGroup]="userform">
+<label>Name:</label>
+<input type="text" formControlName="name"><br>
+<div *ngIf="userform.get('name')?.touched && userform.get('name')?.invalid">
+    <p *ngIf="userform.get('name')?.errors?.['required']">Name is Required</p>
+    <p *ngIf="userform.get('name')?.errors?.['minLength']">Name is minimum 6 characters</p>
+    <p *ngIf="userform.get('name')?.errors?.['maxLength']">Name is maximum 10characters</p>
+</div>
+<label>Email:</label>
+<input type="email" formControlName="email"><br>
+<label>Password:</label>
+<input type="password" formControlName="password"><br>
+<label>Mobile Number:</label>
+<input type="number" formControlName="mobile"><br>
+
+<div formGroupName="address">
+        <label>city:</label>
+        <input type="text" formControlName="city"><br>
+        <label>state:</label>
+        <input type="text" formControlName="state"><br>
+        <label>pincode:</label>
+        <input type="number" formControlName="pincode"><br>
+    </div>
+    <label>Type:</label>
+    <input type="radio" name="type" formControlName="type" value="dayScholar">
+    <label>Day Scholar</label>
+    <input type="radio" name="type" formControlName="type" value="residential">
+    <label>residential</label><br>
+    
+    <div *ngIf="userform.get('type')?.value=='dayScholar'">
+    <label>Bus Fee:</label>
+    <input type="number" formControlName="busFee">
+    </div>
+
+    <div *ngIf="userform.get('type')?.value=='residential'">
+    <label>Hostel Fee:</label>
+    <input type="number" formControlName="hostelFee">
+    </div>
+
+    <h3>Cards</h3>
+    <button (click)="addCard()" class="btn btn-primary">Add Card</button>
+    <div formArrayName="cards">
+        <div *ngFor="let card of cardsFormArray.controls;let i = index">
+            <div formGroupName="{{i}}">
+                <h3>card{{i+1}}</h3>
+                <label>card Number</label>
+                <input type="number" formControlName="cardNumber"><br>
+                <label>Expiry Date</label>
+                <input type="month" formControlName="expiry"><br>
+                <label>Cvv</label>
+                <input type="number" formControlName="cvv"><br>
+                <button class="btn btn-danger" (click)="delete(i)">Delete</button>
+            </div>
+
+        </div>
+    </div>
+
+<button (click)="submit()" class="btn btn-success">Submit</button>
+</form>

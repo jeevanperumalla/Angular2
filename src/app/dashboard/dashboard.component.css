@@ -9,6 +9,7 @@
     width: 20%;
     height: 100%;
     background-color: rgb(53, 198, 234);
+    overflow: auto;
 }
 .right{
     width: 80%;
