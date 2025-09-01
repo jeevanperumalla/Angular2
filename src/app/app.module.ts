@@ -29,6 +29,15 @@ import { StudentComponent } from './student/student.component';
 import { CreateUserComponent } from './create-user/create-user.component';
 import { CreatStudentComponent } from './creat-student/creat-student.component';
 import { VehiclesDetailsComponent } from './vehicles-details/vehicles-details.component';
+import { Sibling1Component } from './sibling1/sibling1.component';
+import { Sibling2Component } from './sibling2/sibling2.component';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component';
+import { FlipkartchildComponent } from './flipkartchild/flipkartchild.component';
+import { StudentDetailsComponent } from './student-details/student-details.component';
+import { AboutUsModule } from './about-us/about-us.module';
+import { AccountsComponent } from './accounts/accounts.component';
+import { CreateAccountComponent } from './create-account/create-account.component';
 
 @NgModule({
   declarations: [
@@ -56,14 +65,23 @@ import { VehiclesDetailsComponent } from './vehicles-details/vehicles-details.co
     StudentComponent,
     CreateUserComponent,
     CreatStudentComponent,
-    VehiclesDetailsComponent
+    VehiclesDetailsComponent,
+    Sibling1Component,
+    Sibling2Component,
+    ParentComponent,
+    ChildComponent,
+    FlipkartchildComponent,
+    StudentDetailsComponent,
+    AccountsComponent,
+    CreateAccountComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AboutUsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

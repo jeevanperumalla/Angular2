@@ -1,5 +1,13 @@
-<div class="weather-card">
-        <h3>Weather in Hyderabad</h3>
-    
- 
+<div *ngIf="weatherData" class="Card">
+  <h1>Weather in Hyderbad</h1>
+
+  <div class="Sun" [ngStyle]="{'background-color': Suncolor}"></div>
+
+  <h1 style="color: orange;">{{ weatherData.temperature }} °C</h1>
+  <p><strong>Wind Speed:</strong> {{ weatherData.windspeed }} km/h</p>
+  <p><strong>Wind Direction:</strong> {{ weatherData.winddirection }} °</p>
+  <p>{{ getDayOrNight() }}</p>
+  
+
+
 </div>

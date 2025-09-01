@@ -1,0 +1,72 @@
+
+
+<input type="text"  [(ngModel)]="searchkeyword" (keyup)="search()">
+
+<select [(ngModel)]="columnName" >
+    <option value="account_name">Account name</option>
+    <option value="account_number">Account number</option>
+    <option value="available_balance">Available balance</option>
+    <option value="city">City</option>
+    <option value="ifsc_code">Ifsc code</option>
+    <option value="profie_picture">Profile picture </option>
+</select>
+
+<select [(ngModel)]="orderName" >
+    <option value="asc">Ascending order</option>
+    <option value="desc">Descending order</option>
+</select>
+
+<button class="btn btn-success" (click)="sort()">Sorting</button>
+
+
+<select [(ngModel)]="limitNumber" >
+    <option value="15">15</option>
+    <option value="30">30</option>
+    <option value="45">45</option>
+    <option value="60">60</option>
+</select>
+
+<select [(ngModel)]="pageNumber">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+</select>
+
+<button class="btn btn-primary" (click)="pagination()">Submit</button>
+<button class=" btn btn-success" (click)="create()">Create</button>
+
+<div>
+<table class="table table-success">
+    <thead>
+<tr>
+    <!-- <td>S no</td> -->
+    <th> Account name </th>
+    <th> Available balance </th>
+    <th> Account number </th>
+    <th> City </th>
+    <th>Profie picture</th>
+    <th>Ifsc code</th>
+    <th>Actions</th>
+</tr>
+    </thead>
+   <tbody>
+    <tr *ngFor="let details of accounts ,let i=index">
+         <!-- <td>{{i+1}}</td> -->
+        <td> {{details.account_name}} </td>
+        <td> {{details.available_balance}} </td>
+        <td> {{details.account_number}} </td>
+        <td> {{details.city}} </td>
+        <td> 
+            <img src="{{details.profie_picture}}" alt="" width="150px"  height="50px">
+        </td>
+        <td> {{details.ifsc_code}} </td>
+        <td>
+            <button class="btn btn-danger" (click)="delete(details.id)">Delete</button>
+        </td>
+    </tr>
+   </tbody>
+
+</table>
+</div>

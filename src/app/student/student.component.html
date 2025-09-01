@@ -1,8 +1,8 @@
 <h2>Student ID Card</h2>
 
-<input type="text" gap="10px" [(ngModel)]="searchKeyword" (keyup)="search()" >
+<input type="text" gap="10px" [(ngModel)]="searchkeyword" (keyup)="search()" >
 
-<select [(ngModel)] ="columnName">
+<select [(ngModel)] ="coloumnName">
     <option value="name">Name</option>
     <option value="phone">Phone</option>
     <option value="city">City</option>
@@ -13,13 +13,13 @@
     <option value="school_name">School Name</option>
 </select>
 
-<select [(ngModel)] ="orderName">
+<select [(ngModel)] ="sortOrder">
     <option value="asc">Ascending order</option>
     <option value="desc">Descending order</option>
 </select>
 
 
-<button class="btn btn-primary" (click)="sorting()">Sort</button>
+<button class="btn btn-primary" (click)="sort()">Sort</button>
 
 
 <select [(ngModel)]="items" >
@@ -28,14 +28,13 @@
     <option value="15">15</option>
 </select>
 
-<select [(ngModel)]="pageNumbers" >
+<select [(ngModel)]="pagenumber" >
     <option value="1">1</option>
     <option value="2">2</option>
     <option value="3">3</option>
 </select>
 
 <button class="btn btn-primary" (click)="pagination()" >Submit</button>
-
 <button class="btn btn-info" (click)="create()">Create</button>
 
 <div class="parent">
@@ -63,8 +62,8 @@
             <h6> School_pin:{{student.school_pin}}</h6>
         </div>
         <div class="bottom-down">
-            <button style="width: 50px; height: 30px;border-radius: 10px;background-color:aqua;">View</button>
-            <button style="width: 50px; height: 30px; border-radius: 10px; background-color:blue;">Edit</button>
+            <button routerLink="/dashboard/student-details/{{student.id}}" style="width: 50px; height: 30px;border-radius: 10px;background-color:aqua;">View</button>
+            <button routerLink="/dashboard/edit-StudentDetails/{{student.id}}" style="width: 50px; height: 30px; border-radius: 10px; background-color:blue;">Edit</button>
             <button style="width: 65px; height: 30px; border-radius: 10px; background-color: red;" (click)="delete(student.id)">Delete</button>
             </div>
         </div>

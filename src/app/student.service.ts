@@ -7,27 +7,33 @@ import { Observable } from 'rxjs';
 })
 export class StudentService {
   constructor(private _httpclient:HttpClient) { }
-  getidcard():Observable<any>{
+  getStudentdetails():Observable<any>{
     return this._httpclient.get('https://6128991386a213001729f9df.mockapi.io/test/v1/student');
 }
 
- getFilteredidcard(term:any):Observable<any>{
+getStudent(id: number):Observable<any>{
+    return this._httpclient.get('https://6128991386a213001729f9df.mockapi.io/test/v1/student/'+id);
+}
+update(id:number, data:any):Observable<any>{
+    return this._httpclient.put('https://6128991386a213001729f9df.mockapi.io/test/v1/student/'+id,data);
+}
+getFilteredStudent(term:any):Observable<any>{
     return this._httpclient.get('https://6128991386a213001729f9df.mockapi.io/test/v1/student?filter='+term);
   }
 
-  getSortedidcard(column:any,order:any):Observable<any>{
+getSortedStudentDetails(column:any,order:any):Observable<any>{
     return this._httpclient.get('https://6128991386a213001729f9df.mockapi.io/test/v1/student?sortby='+column+'&order='+order);
   }
 
-  deleteidcard(id:any):Observable<any>{
+  deleteStudent_id(id:any):Observable<any>{
   return this._httpclient.delete('https://6128991386a213001729f9df.mockapi.io/test/v1/student/'+id);
   }
 
-  getpagitedidcard(limit:any,page:any):Observable<any>{
+  getPaginatedStudent(limit:any,page:any):Observable<any>{
     return this._httpclient.get('https://6128991386a213001729f9df.mockapi.io/test/v1/student?limit='+limit+"&page="+page);
   }
 
-  createIdCard(data:any):Observable<any>{
+  createStudent(data:any):Observable<any>{
   return this._httpclient.post('https://6128991386a213001729f9df.mockapi.io/test/v1/student',data);
 }
 

@@ -1,0 +1,27 @@
+<h2>Account Details</h2>
+
+<form [formGroup]="accountsForm" >
+    <label>Account name :</label>
+    <input type="text" formControlName="account_name" ><br>
+
+ <label>Available balance :</label>
+    <input type="text" formControlName="available_balance"><br>
+
+     <label>Account number :</label>
+    <input type="text" formControlName="account_number"><br>
+
+     <label>City :</label>
+    <input type="text" formControlName="city"><br>
+
+     <label>Profile picture :</label>
+    <input type="text" formControlName="profie_picture"><br>
+
+ <label>IFSC code :</label>
+    <input type="text" formControlName="ifsc_code"><br>
+
+
+<button (click)="create()" class="btn btn-info">Create</button>
+
+
+</form>
+

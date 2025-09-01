@@ -1,1 +1,12 @@
-<p>login works!</p>
+<form class="form" [formGroup]="loginForm">
+    <h1>Login</h1>
+    <span class="input -span">
+        <label for="email" class="label">Email:</label>
+        <input type="email" formControlName="email" name="email">
+    </span><br>
+    <span class="input -span">
+        <label for="password" class="label">Password:</label>
+        <input type="password" formControlName="password" name="password">
+    </span><br>
+    <input type="submit" type="submit" (click)="login()">
+</form>
