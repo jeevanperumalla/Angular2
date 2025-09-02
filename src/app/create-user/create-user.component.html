@@ -2,14 +2,19 @@
 
 <form [formGroup]="userform">
 <label>Name:</label>
-<input type="text" formControlName="name"><br>
+<input type="text" formControlName="name" appCapital><br>
 <div *ngIf="userform.get('name')?.touched && userform.get('name')?.invalid">
+    <!-- <app-text-area [max]="50"></app-text-area> -->
     <p *ngIf="userform.get('name')?.errors?.['required']">Name is Required</p>
     <p *ngIf="userform.get('name')?.errors?.['minLength']">Name is minimum 6 characters</p>
-    <p *ngIf="userform.get('name')?.errors?.['maxLength']">Name is maximum 10characters</p>
+    <p *ngIf="userform.get('name')?.errors?.['maxLength']">Name is maximum 10 characters</p>
 </div>
 <label>Email:</label>
 <input type="email" formControlName="email"><br>
+<p *ngIf="userform.get('email')?.errors?.['required']">email is Required</p>
+<p *ngIf="userform.get('email')?.errors?.['minLength']">Name is minimum 6 characters</p>
+<p *ngIf="userform.get('email')?.errors?.['maxLength']">Name is maximum 20 characters</p>
+<p *ngIf="userform.get('email')?.errors?.['appleMail']"> Please use Apple mail only</p>
 <label>Password:</label>
 <input type="password" formControlName="password"><br>
 <label>Mobile Number:</label>
