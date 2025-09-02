@@ -33,5 +33,5 @@
   <label>School-pin: </label>
     <input style="margin: 5px;" type="text"  formControlName="school_pin" ><br>
 
-    <button class="btn btn-warning" (click)="Submit()">Submit</button>
+    <button class="btn btn-warning" [disabled]="!studentForm.valid" (click)="Submit()">Submit</button>
 </form>

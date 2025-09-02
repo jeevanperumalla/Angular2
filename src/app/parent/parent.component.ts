@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { User } from '../user';
 
 @Component({
   selector: 'app-parent',
@@ -15,5 +16,9 @@ export class ParentComponent {
   // count(data:number){
   //   alert(data);
   // }
-
+ userDetails:User={
+  name:'Jeevan',
+  mobile:7287880354,
+  isIndian:true
+ }
 }

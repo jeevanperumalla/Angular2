@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { StudentService } from '../student.service';
 import { ActivatedRoute, Router } from '@angular/router';
 
@@ -11,16 +11,16 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class CreatStudentComponent {
 public studentForm:FormGroup=new FormGroup({
 
-  name:new FormControl(),
-  phone:new FormControl(),
-  city:new FormControl(),
-  dob:new FormControl(),
-  profile_picture:new FormControl(),
-  email:new FormControl(),
-  school_logo: new FormControl(),
-  school_name:new FormControl(),
-  school_city:new FormControl(),
-  school_pin:new FormControl(),
+  name:new FormControl('', Validators.required),
+  phone:new FormControl('', Validators.required),
+  city:new FormControl('', Validators.required),
+  dob:new FormControl('', Validators.required),
+  profile_picture:new FormControl('', Validators.required),
+  email:new FormControl('', Validators.required),
+  school_logo: new FormControl('', Validators.required),
+  school_name:new FormControl('', Validators.required),
+  school_city:new FormControl('', Validators.required),
+  school_pin:new FormControl('', Validators.required),
   });
   id:number=0;
   constructor(private _studentService:StudentService, private _router:Router, activatedroute:ActivatedRoute){

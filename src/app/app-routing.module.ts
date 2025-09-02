@@ -33,11 +33,11 @@ import { CreateAccountComponent } from './create-account/create-account.componen
 
 
 
-const routes: Routes = [
+const routes: Routes =[
   // default routing  
   {path:'login',component:LoginComponent},
-  {path:'dashboard', component:DashboardComponent, canActivate:[AuthenticationGuard],children:[
-    {path:'home',component:HomeComponent},  
+  {path:'dashboard',component:DashboardComponent,canActivate:[AuthenticationGuard],children:[
+   {path:'home',component:HomeComponent},  
     // {path:'gallery',component:GalleryComponent},
     // {path:'welcome',component:WelcomeComponent},
     // {path:'DataBinding',component:DataBindingComponent},
